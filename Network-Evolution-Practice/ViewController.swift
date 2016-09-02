@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SwiftyJSON
+import Alamofire
 
 class ViewController: UIViewController {
 	
@@ -19,6 +21,19 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
+		
+		let url = "http://httpbin.org/post"
+		let params = ["param": "yoxisem544"]
+		
+		// make a request
+		request(.POST, url, parameters: params).response { _, _, data, error in
+			if let jsonData = data where error == nil {
+				let json = JSON(data: jsonData)
+				self.label.text = "Username: " + json["form"]["param"].stringValue
+			} else {
+				self.label.text = "Requset failed"
+			}
+		}
 	}
 
 	override func didReceiveMemoryWarning() {
