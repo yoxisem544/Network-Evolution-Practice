@@ -1,0 +1,6 @@
+framework module Pods_Network_Evolution_Practice {
+  umbrella header "Pods-Network-Evolution-Practice-umbrella.h"
+
+  export *
+  module * { export * }
+}

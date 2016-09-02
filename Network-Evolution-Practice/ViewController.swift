@@ -9,6 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController {
+	
+	convenience init() {
+		self.init(nibName: "ViewController", bundle: nil)
+	}
+	
+	@IBOutlet weak var label: UILabel!
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
