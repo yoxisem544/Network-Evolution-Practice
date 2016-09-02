@@ -22,6 +22,10 @@
 		63B332B31D793C680089C066 /* JSONDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B332B21D793C680089C066 /* JSONDecodable.swift */; };
 		63B332B41D7944680089C066 /* JSONDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B332B21D793C680089C066 /* JSONDecodable.swift */; };
 		63B332B51D7944810089C066 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B332B01D793BC90089C066 /* User.swift */; };
+		63B332B71D79484F0089C066 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B332B61D79484F0089C066 /* NetworkRequest.swift */; };
+		63B332B81D79484F0089C066 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B332B61D79484F0089C066 /* NetworkRequest.swift */; };
+		63B332BA1D794D350089C066 /* FetchUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B332B91D794D350089C066 /* FetchUser.swift */; };
+		63B332BB1D794D350089C066 /* FetchUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B332B91D794D350089C066 /* FetchUser.swift */; };
 		7D4F59B256007EFCAC65CF59 /* Pods_Network_Evolution_Practice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFE4CADBD2321AA15496C5F2 /* Pods_Network_Evolution_Practice.framework */; };
 		F06A28DA6C429FE37770F3FB /* Pods_Network_Evolution_PracticeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677E94A69D15866A3FF4B2D3 /* Pods_Network_Evolution_PracticeTests.framework */; };
 /* End PBXBuildFile section */
@@ -61,6 +65,8 @@
 		63B332AC1D791F020089C066 /* ViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		63B332B01D793BC90089C066 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		63B332B21D793C680089C066 /* JSONDecodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDecodable.swift; sourceTree = "<group>"; };
+		63B332B61D79484F0089C066 /* NetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		63B332B91D794D350089C066 /* FetchUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchUser.swift; sourceTree = "<group>"; };
 		63D253AA9431797EB5CFE2DF /* Pods-Network-Evolution-PracticeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Network-Evolution-PracticeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Network-Evolution-PracticeUITests/Pods-Network-Evolution-PracticeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		65EDD456E168F3BF7A20BFBE /* Pods-Network-Evolution-PracticeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Network-Evolution-PracticeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Network-Evolution-PracticeUITests/Pods-Network-Evolution-PracticeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		677E94A69D15866A3FF4B2D3 /* Pods_Network_Evolution_PracticeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Network_Evolution_PracticeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +149,8 @@
 				63B332AA1D791C450089C066 /* NetworkClient.swift */,
 				63B332B01D793BC90089C066 /* User.swift */,
 				63B332B21D793C680089C066 /* JSONDecodable.swift */,
+				63B332B61D79484F0089C066 /* NetworkRequest.swift */,
+				63B332B91D794D350089C066 /* FetchUser.swift */,
 			);
 			path = "Network-Evolution-Practice";
 			sourceTree = "<group>";
@@ -444,7 +452,9 @@
 				63B332B31D793C680089C066 /* JSONDecodable.swift in Sources */,
 				63B3327D1D7864DF0089C066 /* ViewController.swift in Sources */,
 				63B3327B1D7864DF0089C066 /* AppDelegate.swift in Sources */,
+				63B332B71D79484F0089C066 /* NetworkRequest.swift in Sources */,
 				63B332AB1D791C450089C066 /* NetworkClient.swift in Sources */,
+				63B332BA1D794D350089C066 /* FetchUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,7 +466,9 @@
 				63B332AD1D791F020089C066 /* ViewControllerTests.swift in Sources */,
 				63B332AF1D79212D0089C066 /* NetworkClient.swift in Sources */,
 				63B332B51D7944810089C066 /* User.swift in Sources */,
+				63B332B81D79484F0089C066 /* NetworkRequest.swift in Sources */,
 				63B332B41D7944680089C066 /* JSONDecodable.swift in Sources */,
+				63B332BB1D794D350089C066 /* FetchUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

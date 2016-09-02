@@ -24,29 +24,28 @@ class ViewControllerTests: XCTestCase {
 
 extension ViewControllerTests {
 	func test_successNetworkResponse_showsUsername() {
-		viewController.networkClient = MockSuccessNetworkClient()
+		viewController.fetchUser = MockSuccessFetchUser()
 		viewController.loadViewIfNeeded()
 		XCTAssertEqual(viewController.label.text, "Username: yoxisem544")
 	}
 	
 	func test_failureNetworkResponse_showsUsername() {
-		viewController.networkClient = MockFailureNetworkClient()
+		viewController.fetchUser = MockFailureFetchUser()
 		viewController.loadViewIfNeeded()
 		XCTAssertEqual(viewController.label.text, "Request failed")
 	}
 }
 
 // MARK: - Mocks
-private struct MockSuccessNetworkClient: NetworkClientType {
-	private func makeRequest<Response : JSONDecodable>(url: String, params: [String : AnyObject], callback: (Response?, ErrorType?) -> Void) {
-		let json = JSON(["form": ["param": "yoxisem544"]])
-		let response = Response(json: json)
-		callback(response, nil)
+private class MockSuccessFetchUser: FetchUser {
+	private override func perform(username: String, callback: (User?, ErrorType?) -> Void) {
+		let user = User(name: username)
+		callback(user, nil)
 	}
 }
 
-private struct MockFailureNetworkClient: NetworkClientType {
-	private func makeRequest<Response : JSONDecodable>(url: String, params: [String : AnyObject], callback: (Response?, ErrorType?) -> Void) {
+private class MockFailureFetchUser: FetchUser {
+	private override func perform(username: String, callback: (User?, ErrorType?) -> Void) {
 		callback(nil, NSError(domain: "", code: -1, userInfo: nil))
 	}
 }

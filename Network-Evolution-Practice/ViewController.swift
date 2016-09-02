@@ -17,17 +17,14 @@ class ViewController: UIViewController {
 	}
 	
 	@IBOutlet weak var label: UILabel!
-	var networkClient: NetworkClientType = NetworkClient()
+	var fetchUser: FetchUser = FetchUser()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
 		
-		let url = "http://httpbin.org/post"
-		let params = ["param": "feighter09"]
-		
 		// make a request
-		networkClient.makeRequest(url, params: params) { (user: User?, error) in
+		fetchUser.perform("yoxisem544") { (user, error) in
 			if let user = user where error == nil {
 				self.label.text = "Username: " + user.name
 			} else {
