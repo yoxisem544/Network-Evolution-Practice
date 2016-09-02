@@ -26,9 +26,8 @@ class ViewController: UIViewController {
 		let params = ["param": "yoxisem544"]
 		
 		// make a request
-		request(.POST, url, parameters: params).response { _, _, data, error in
-			if let jsonData = data where error == nil {
-				let json = JSON(data: jsonData)
+		NetworkClient.makeRequest(url, params: params) { json, error in
+			if let json = json where error == nil {
 				self.label.text = "Username: " + json["form"]["param"].stringValue
 			} else {
 				self.label.text = "Requset failed"

@@ -15,6 +15,7 @@
 		63B332901D7864DF0089C066 /* Network_Evolution_PracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B3328F1D7864DF0089C066 /* Network_Evolution_PracticeTests.swift */; };
 		63B3329B1D7864DF0089C066 /* Network_Evolution_PracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B3329A1D7864DF0089C066 /* Network_Evolution_PracticeUITests.swift */; };
 		63B332A91D79146E0089C066 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63B332A81D79146E0089C066 /* ViewController.xib */; };
+		63B332AB1D791C450089C066 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B332AA1D791C450089C066 /* NetworkClient.swift */; };
 		7D4F59B256007EFCAC65CF59 /* Pods_Network_Evolution_Practice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFE4CADBD2321AA15496C5F2 /* Pods_Network_Evolution_Practice.framework */; };
 		F06A28DA6C429FE37770F3FB /* Pods_Network_Evolution_PracticeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677E94A69D15866A3FF4B2D3 /* Pods_Network_Evolution_PracticeTests.framework */; };
 /* End PBXBuildFile section */
@@ -51,6 +52,7 @@
 		63B3329A1D7864DF0089C066 /* Network_Evolution_PracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network_Evolution_PracticeUITests.swift; sourceTree = "<group>"; };
 		63B3329C1D7864DF0089C066 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63B332A81D79146E0089C066 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		63B332AA1D791C450089C066 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		63D253AA9431797EB5CFE2DF /* Pods-Network-Evolution-PracticeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Network-Evolution-PracticeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Network-Evolution-PracticeUITests/Pods-Network-Evolution-PracticeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		65EDD456E168F3BF7A20BFBE /* Pods-Network-Evolution-PracticeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Network-Evolution-PracticeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Network-Evolution-PracticeUITests/Pods-Network-Evolution-PracticeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		677E94A69D15866A3FF4B2D3 /* Pods_Network_Evolution_PracticeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Network_Evolution_PracticeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +132,7 @@
 				63B332811D7864DF0089C066 /* Assets.xcassets */,
 				63B332831D7864DF0089C066 /* LaunchScreen.storyboard */,
 				63B332861D7864DF0089C066 /* Info.plist */,
+				63B332AA1D791C450089C066 /* NetworkClient.swift */,
 			);
 			path = "Network-Evolution-Practice";
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 			files = (
 				63B3327D1D7864DF0089C066 /* ViewController.swift in Sources */,
 				63B3327B1D7864DF0089C066 /* AppDelegate.swift in Sources */,
+				63B332AB1D791C450089C066 /* NetworkClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
