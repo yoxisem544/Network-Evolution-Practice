@@ -23,10 +23,13 @@ class ViewController: UIViewController {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
 		
+		let url = "http://httpbin.org/post"
+		let params = ["param": "feighter09"]
+		
 		// make a request
-		networkClient.fetchUsername { (username, error) in
-			if let username = username where error == nil {
-				self.label.text = "Username: " + username
+		networkClient.makeRequest(url, params: params) { (user: User?, error) in
+			if let user = user where error == nil {
+				self.label.text = "Username: " + user.name
 			} else {
 				self.label.text = "Request failed"
 			}

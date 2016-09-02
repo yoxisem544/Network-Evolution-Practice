@@ -11,39 +11,25 @@ import Alamofire
 import SwiftyJSON
 
 protocol NetworkClientType {
-	func fetchUsername(callback: (String?, ErrorType?) -> Void)
-	func makeRequest(url: String,
+	func makeRequest<Response: JSONDecodable>(url: String,
 	                        params: [String : AnyObject],
-	                        callback: (JSON?, ErrorType?) -> Void)
+	                        callback: (Response?, ErrorType?) -> Void)
 }
 
 struct NetworkClient: NetworkClientType {
 	
-	func fetchUsername(callback: (String?, ErrorType?) -> Void) {
-		let url = "http://httpbin.org/post"
-		let params = ["param": "yoxisem544"]
-		
-		makeRequest(url, params: params) { (json, error) in
-			if let json = json where error == nil {
-				let username = json["form"]["param"].string
-				callback(username, nil)
+	func makeRequest<Response : JSONDecodable>(url: String,
+	                 params: [String : AnyObject],
+	                 callback: (Response?, ErrorType?) -> Void) {
+		request(.POST, url, parameters: params).response { _, _, data, error in
+			if let jsonData = data where error == nil {
+				let json = JSON(data: jsonData)
+				let response = Response(json: json)
+				callback(response, nil)
 			} else {
 				callback(nil, error)
 			}
 		}
 	}
 	
-	func makeRequest(url: String,
-	                        params: [String : AnyObject],
-	                        callback: (JSON?, ErrorType?) -> Void) {
-		request(.POST, url, parameters: params).response { _, _, data, error in
-			if let jsonData = data where error == nil {
-				let json = JSON(data: jsonData)
-				callback(json, nil)
-			} else {
-				callback(nil, error)
-			}
-		}
-		
-	}
 }

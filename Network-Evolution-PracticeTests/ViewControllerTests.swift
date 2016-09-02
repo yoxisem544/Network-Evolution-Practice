@@ -38,14 +38,15 @@ extension ViewControllerTests {
 
 // MARK: - Mocks
 private struct MockSuccessNetworkClient: NetworkClientType {
-	private func makeRequest(url: String, params: [String : AnyObject], callback: (JSON?, ErrorType?) -> Void) {
+	private func makeRequest<Response : JSONDecodable>(url: String, params: [String : AnyObject], callback: (Response?, ErrorType?) -> Void) {
 		let json = JSON(["form": ["param": "yoxisem544"]])
-		callback(json, nil)
+		let response = Response(json: json)
+		callback(response, nil)
 	}
 }
 
 private struct MockFailureNetworkClient: NetworkClientType {
-	private func makeRequest(url: String, params: [String : AnyObject], callback: (JSON?, ErrorType?) -> Void) {
+	private func makeRequest<Response : JSONDecodable>(url: String, params: [String : AnyObject], callback: (Response?, ErrorType?) -> Void) {
 		callback(nil, NSError(domain: "", code: -1, userInfo: nil))
 	}
 }
