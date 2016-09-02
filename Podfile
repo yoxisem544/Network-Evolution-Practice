@@ -8,6 +8,7 @@ target 'Network-Evolution-Practice' do
   # Pods for Network-Evolution-Practice
   pod 'Alamofire'
   pod 'SwiftyJSON'
+  pod "PromiseKit"
 
   target 'Network-Evolution-PracticeTests' do
     inherit! :search_paths

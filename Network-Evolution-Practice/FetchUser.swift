@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import PromiseKit
 
 class FetchUser: NetworkRequest {
 	typealias ResponseType = User
@@ -18,12 +19,9 @@ class FetchUser: NetworkRequest {
 	
 	private var username: String = ""
 	
-	func perform(username: String, callback: (User?, ErrorType?) -> Void) {
+	func perform(username: String) -> Promise<User> {
 		self.username = username
-		let parsedCallback = { (data: NSData?, error: ErrorType?) in
-			let response = data.flatMap(self.responseHandler)
-			callback(response, error)
-		}
-		networkClient.makeRequest(self, callback: parsedCallback)
+		return networkClient.performRequest(self).then(responseHandler)
 	}
+	
 }

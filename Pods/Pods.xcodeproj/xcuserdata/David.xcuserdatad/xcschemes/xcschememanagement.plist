@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>OMGHTTPURLRQ.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Network-Evolution-Practice.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -24,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>PromiseKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,7 +42,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>190ACD3A51BC90B85EADB13E9CDD207B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1D7B7D1845939C458D07D60CCFAD5631</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>2B489AEA7C122C04C375920BDE495CFE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>626012EB288C9C14190DD0944792D62D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,17 +67,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>7DE5E8B8A5CCDAF35CAE2CC5D610496A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>C51AA3E5FF3C077380DCB915375278C1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C917C7DBC609BB2DBED2249BFACB4236</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E0CD3FD8D6ABD472955E25C1BEB95EAC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

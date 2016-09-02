@@ -24,13 +24,13 @@ class ViewController: UIViewController {
 		// Do any additional setup after loading the view, typically from a nib.
 		
 		// make a request
-		fetchUser.perform("yoxisem544") { (user, error) in
-			if let user = user where error == nil {
+		fetchUser.perform("yoxisem544")
+			.then { user in
 				self.label.text = "Username: " + user.name
-			} else {
+			}
+			.error { error in
 				self.label.text = "Request failed"
 			}
-		}
 	}
 
 	override func didReceiveMemoryWarning() {
