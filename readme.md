@@ -10,6 +10,14 @@
 ## 前言
 這邊會分為7個階段
 
+1. [Make Requset With Alamofire](https://github.com/yoxisem544/Network-Evolution-Practice#1-make-requset-with-alamofire)
+2. [讓 NetworkClient 來負責網路的處理](https://github.com/yoxisem544/Network-Evolution-Practice#2-讓-networkclient-來負責網路的處理)
+3. [測式](https://github.com/yoxisem544/Network-Evolution-Practice#3-測式)
+4. [API-Specific Methods](https://github.com/yoxisem544/Network-Evolution-Practice#4-api-specific-methods)
+5. [Model 是要可以被解析成 JSON 的](https://github.com/yoxisem544/Network-Evolution-Practice#5-model-是要可以被解析成-json-的)
+6. [Service Object to Encapsulate Network Requests](https://github.com/yoxisem544/Network-Evolution-Practice#6-service-object-to-encapsulate-network-requests)
+7. [Callback -> Promise](https://github.com/yoxisem544/Network-Evolution-Practice#7-callback---promise)
+
 分別講解每一個階段所做的不同的事情與變動
 
 以及，以我的角度去理解，做出這個改變的優點
