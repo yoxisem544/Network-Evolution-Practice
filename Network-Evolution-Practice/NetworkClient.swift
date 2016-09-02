@@ -10,8 +10,14 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-struct NetworkClient {
-	static func makeRequest(url: String,
+protocol NetworkClientType {
+	func makeRequest(url: String,
+	                        params: [String : AnyObject],
+	                        callback: (JSON?, ErrorType?) -> Void)
+}
+
+struct NetworkClient: NetworkClientType {
+	func makeRequest(url: String,
 	                        params: [String : AnyObject],
 	                        callback: (JSON?, ErrorType?) -> Void) {
 		request(.POST, url, parameters: params).response { _, _, data, error in

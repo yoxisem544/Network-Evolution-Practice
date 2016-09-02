@@ -17,6 +17,7 @@ class ViewController: UIViewController {
 	}
 	
 	@IBOutlet weak var label: UILabel!
+	var networkClient: NetworkClientType = NetworkClient()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -26,11 +27,11 @@ class ViewController: UIViewController {
 		let params = ["param": "yoxisem544"]
 		
 		// make a request
-		NetworkClient.makeRequest(url, params: params) { json, error in
+		networkClient.makeRequest(url, params: params) { json, error in
 			if let json = json where error == nil {
 				self.label.text = "Username: " + json["form"]["param"].stringValue
 			} else {
-				self.label.text = "Requset failed"
+				self.label.text = "Request failed"
 			}
 		}
 	}
